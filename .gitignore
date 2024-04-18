@@ -10,6 +10,13 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 
+#Asset Store & PLugins
+/[Aa]ssets/Plugins/Editor/ScriptInspector*
+/[Aa]ssets/BNG Framework/*
+!/[Aa]ssets/BNG Framework/Scripts/BNG Core.asmdef
+!/[Aa]ssets/BNG Framework/HandPoser/Scripts/BNG.HandPose.asmdef
+/[Aa]ssets/Polygon*/*
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
