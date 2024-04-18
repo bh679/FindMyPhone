@@ -16,6 +16,7 @@
 !/[Aa]ssets/BNG Framework/Scripts/BNG Core.asmdef
 !/[Aa]ssets/BNG Framework/HandPoser/Scripts/BNG.HandPose.asmdef
 /[Aa]ssets/Polygon*/*
+/[Aa]ssets/Third\ Party\ Assets/*
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
