@@ -1513,6 +1513,12 @@ MonoBehaviour:
     text: Phone Found!
     eventOnStart:
       m_PersistentCalls:
+        m_Calls: []
+  - delay: 3
+    clip: {fileID: 0}
+    text: Phone Found!
+    eventOnStart:
+      m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1626295141}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
