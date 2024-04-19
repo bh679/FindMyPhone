@@ -1,5 +1,15 @@
 {
   "dependencies": {
+    "com.brennanhatton.unitytools": {
+      "version": "https://github.com/bh679/Unity-Tools.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.textmeshpro": "3.0.6",
+        "com.unity.inputsystem": "1.4.4"
+      },
+      "hash": "3a9e8a96a971f51b0c6aebabe7086aabfaef0700"
+    },
     "com.unity.collab-proxy": {
       "version": "2.3.1",
       "depth": 0,
