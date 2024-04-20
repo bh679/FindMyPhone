@@ -513,7 +513,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 348906476}
-  - component: {fileID: 348906475}
   - component: {fileID: 348906474}
   m_Layer: 0
   m_Name: Finished Tutorial
@@ -578,48 +577,6 @@ MonoBehaviour:
   repeats: 0
   onEnable: 1
   repeatOnEnable: 0
---- !u!114 &348906475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348906473}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cebb7b23140b3844bb46679c9a79352, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioList:
-  - delay: 0
-    clip: {fileID: 8300000, guid: 87a8149f4f3c7d94f95b165b244d109b, type: 3}
-    eventOnStart:
-      m_PersistentCalls:
-        m_Calls: []
-  - delay: 0
-    clip: {fileID: 8300000, guid: 616807e5eb27ea042a575de55d70527b, type: 3}
-    eventOnStart:
-      m_PersistentCalls:
-        m_Calls: []
-  - delay: 0
-    clip: {fileID: 8300000, guid: 4ffd17dfd099c0c4184a38cc2a57f373, type: 3}
-    eventOnStart:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 348906474}
-          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-          m_MethodName: set_enabled
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-  source: {fileID: 1288588116}
-  PlayOnEnable: 0
 --- !u!4 &348906476
 Transform:
   m_ObjectHideFlags: 0
@@ -2964,8 +2921,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2032207992}
   - {fileID: 1205633123}
+  - {fileID: 2032207992}
   - {fileID: 348906476}
   - {fileID: 1008821841}
   m_Father: {fileID: 0}
@@ -3069,6 +3026,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Start Tablet
       objectReference: {fileID: 0}
+    - target: {fileID: 5958328995181935928, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 1025
+      objectReference: {fileID: 0}
+    - target: {fileID: 5958328995181935928, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      propertyPath: OnStartOfLastStoryClip.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 348906473}
     - target: {fileID: 6587886860944203789, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
@@ -3283,7 +3250,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032207989}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90f1bb152a3d9d84a9ed58d7b5a1ce12, type: 3}
   m_Name: 
