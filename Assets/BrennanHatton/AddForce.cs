@@ -30,6 +30,11 @@ public class AddForce : MonoBehaviour
 		rb.AddForce(rb.transform.forward * thrust);
 	}
     
+	public void AddForceLocalUp()
+	{
+		rb.AddForce(rb.transform.up * thrust);
+	}
+    
 	public void AddForceRotationForward()
 	{
 		rb.AddTorque(rb.transform.forward * thrust);

@@ -292,6 +292,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168199309}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &236588976 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3876576396901771159, guid: 4b016a19a02354017983c476d64ec2fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1712704543}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &242587667 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 464886, guid: 4290c366a38253b4f87a53b8a3654483,
@@ -2048,8 +2054,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1207542634}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.428, y: -1.316, z: 3.899}
+  m_LocalRotation: {x: -0, y: 0.1413972, z: -0, w: 0.989953}
+  m_LocalPosition: {x: 0.4, y: -1.316, z: 3.891}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2057,7 +2063,7 @@ Transform:
   - {fileID: 1695062337}
   m_Father: {fileID: 1272565209}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 16.257, z: 0}
 --- !u!65 &1207542636
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2366,6 +2372,32 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 1712704543}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1305842064 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 922994261680376064, guid: 4b016a19a02354017983c476d64ec2fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1712704543}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1305842068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305842064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 597312d109f2641cd9540ed074770658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToRotate: {fileID: 236588976}
+  startApm: 0.01
+  speed: 100
+  resistance: 0.01
+  resetTime: 1
+  offset: 90
+  amp: 0
+  resetNumber: 2
 --- !u!4 &1318912154 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 464886, guid: 4290c366a38253b4f87a53b8a3654483,
@@ -3933,6 +3965,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Start Tablet
       objectReference: {fileID: 0}
+    - target: {fileID: 4702469230863194183, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      propertyPath: TimedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702469230863194183, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      propertyPath: TimedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702469230863194183, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      propertyPath: TimedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1305842068}
+    - target: {fileID: 4702469230863194183, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      propertyPath: TimedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702469230863194183, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      propertyPath: TimedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ReStart
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702469230863194183, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      propertyPath: TimedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: VibrateRotate, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702469230863194183, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      propertyPath: TimedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702469230863194183, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      propertyPath: TimedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5958328995181935928, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
       propertyPath: OnStartOfLastStoryClip.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3941,7 +4013,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 922994261680376064, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1305842068}
   m_SourcePrefab: {fileID: 100100000, guid: 4b016a19a02354017983c476d64ec2fc, type: 3}
 --- !u!1 &1775226865 stripped
 GameObject:
