@@ -2804,6 +2804,7 @@ MonoBehaviour:
         on their own sometimes.
       audioLine: {fileID: 8300000, guid: 7b1d3b09aa3fb4f4eb843354e0555497, type: 3}
       delayafter: 0
+  itemId: 
 --- !u!65 &110496987
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3298,6 +3299,79 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 119435496}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &121536636
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 358354993384028306, guid: d29469c50036e43c8aae287ed55e875b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 358354993384028306, guid: d29469c50036e43c8aae287ed55e875b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.21321
+      objectReference: {fileID: 0}
+    - target: {fileID: 358354993384028306, guid: d29469c50036e43c8aae287ed55e875b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.47176892
+      objectReference: {fileID: 0}
+    - target: {fileID: 358354993384028306, guid: d29469c50036e43c8aae287ed55e875b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.204991
+      objectReference: {fileID: 0}
+    - target: {fileID: 358354993384028306, guid: d29469c50036e43c8aae287ed55e875b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 358354993384028306, guid: d29469c50036e43c8aae287ed55e875b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 358354993384028306, guid: d29469c50036e43c8aae287ed55e875b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 358354993384028306, guid: d29469c50036e43c8aae287ed55e875b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 358354993384028306, guid: d29469c50036e43c8aae287ed55e875b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 358354993384028306, guid: d29469c50036e43c8aae287ed55e875b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 358354993384028306, guid: d29469c50036e43c8aae287ed55e875b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 949464617454386014, guid: d29469c50036e43c8aae287ed55e875b,
+        type: 3}
+      propertyPath: m_Name
+      value: GlobalPropScannedTracker
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d29469c50036e43c8aae287ed55e875b, type: 3}
 --- !u!1001 &124610659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6819,8 +6893,38 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 867314809, guid: 5b20f7f96ea80dc4cbd7199fbb4d4d3e, type: 3}
+      propertyPath: descriptions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 867314809, guid: 5b20f7f96ea80dc4cbd7199fbb4d4d3e, type: 3}
+      propertyPath: descriptions.Array.data[0].lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 867314809, guid: 5b20f7f96ea80dc4cbd7199fbb4d4d3e, type: 3}
+      propertyPath: descriptions.Array.data[0].lines.Array.data[0].textLine
+      value: I wouldn't start checking the garbage bags.
+      objectReference: {fileID: 0}
+    - target: {fileID: 867314809, guid: 5b20f7f96ea80dc4cbd7199fbb4d4d3e, type: 3}
+      propertyPath: descriptions.Array.data[0].lines.Array.data[1].textLine
+      value: I mean I can help you find your phone... but less so your dignity.
+      objectReference: {fileID: 0}
+    - target: {fileID: 867314809, guid: 5b20f7f96ea80dc4cbd7199fbb4d4d3e, type: 3}
+      propertyPath: descriptions.Array.data[0].lines.Array.data[0].audioLine
+      value: 
+      objectReference: {fileID: 8300000, guid: f49f574edf14e334487c53e0e1360408, type: 3}
+    - target: {fileID: 867314809, guid: 5b20f7f96ea80dc4cbd7199fbb4d4d3e, type: 3}
+      propertyPath: descriptions.Array.data[0].lines.Array.data[1].audioLine
+      value: 
+      objectReference: {fileID: 8300000, guid: b1d55c25cf875994891895200e8027ea, type: 3}
     m_RemovedComponents:
     - {fileID: 64350500237101244, guid: 5b20f7f96ea80dc4cbd7199fbb4d4d3e, type: 3}
+    - {fileID: 867314809, guid: 5b20f7f96ea80dc4cbd7199fbb4d4d3e, type: 3}
+    - {fileID: 8097353937826417121, guid: 5b20f7f96ea80dc4cbd7199fbb4d4d3e, type: 3}
+    - {fileID: 7920604254515633702, guid: 5b20f7f96ea80dc4cbd7199fbb4d4d3e, type: 3}
+    - {fileID: 867314810, guid: 5b20f7f96ea80dc4cbd7199fbb4d4d3e, type: 3}
+    - {fileID: 867314811, guid: 5b20f7f96ea80dc4cbd7199fbb4d4d3e, type: 3}
+    - {fileID: 867314808, guid: 5b20f7f96ea80dc4cbd7199fbb4d4d3e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -10662,6 +10766,7 @@ MonoBehaviour:
         on their own sometimes.
       audioLine: {fileID: 8300000, guid: 7b1d3b09aa3fb4f4eb843354e0555497, type: 3}
       delayafter: 0
+  itemId: 
 --- !u!65 &365686006
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18110,6 +18215,7 @@ MonoBehaviour:
         on their own sometimes.
       audioLine: {fileID: 8300000, guid: 7b1d3b09aa3fb4f4eb843354e0555497, type: 3}
       delayafter: 0
+  itemId: 
 --- !u!65 &644474693
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19273,6 +19379,7 @@ MonoBehaviour:
     - textLine: I'm a little worried that you had to ask me what that was.
       audioLine: {fileID: 8300000, guid: c21a62608364f104086c9da84c78d230, type: 3}
       delayafter: 0
+  itemId: 
 --- !u!65 &683008075
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19452,6 +19559,7 @@ MonoBehaviour:
         on their own sometimes.
       audioLine: {fileID: 8300000, guid: 7b1d3b09aa3fb4f4eb843354e0555497, type: 3}
       delayafter: 0
+  itemId: 
 --- !u!65 &688760629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29467,6 +29575,7 @@ MonoBehaviour:
         on their own sometimes.
       audioLine: {fileID: 8300000, guid: 7b1d3b09aa3fb4f4eb843354e0555497, type: 3}
       delayafter: 0
+  itemId: 
 --- !u!65 &846234338
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36794,6 +36903,7 @@ MonoBehaviour:
         on their own sometimes.
       audioLine: {fileID: 8300000, guid: 7b1d3b09aa3fb4f4eb843354e0555497, type: 3}
       delayafter: 0
+  itemId: 
 --- !u!65 &1105004441
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37273,6 +37383,7 @@ MonoBehaviour:
         on their own sometimes.
       audioLine: {fileID: 8300000, guid: 7b1d3b09aa3fb4f4eb843354e0555497, type: 3}
       delayafter: 0
+  itemId: 
 --- !u!65 &1124038533
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54476,6 +54587,7 @@ MonoBehaviour:
     - textLine: I'm a little worried that you had to ask me what that was.
       audioLine: {fileID: 8300000, guid: c21a62608364f104086c9da84c78d230, type: 3}
       delayafter: 0
+  itemId: 
 --- !u!65 &1723551850
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65748,6 +65860,7 @@ MonoBehaviour:
     - textLine: I'm a little worried that you had to ask me what that was.
       audioLine: {fileID: 8300000, guid: c21a62608364f104086c9da84c78d230, type: 3}
       delayafter: 0
+  itemId: 
 --- !u!4 &2044927127 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 481636, guid: 5bad3bfa14ca03549852bc34961b1515,
@@ -67493,6 +67606,7 @@ MonoBehaviour:
     - textLine: I'm a little worried that you had to ask me what that was.
       audioLine: {fileID: 8300000, guid: c21a62608364f104086c9da84c78d230, type: 3}
       delayafter: 0
+  itemId: 
 --- !u!23 &2111337763
 MeshRenderer:
   m_ObjectHideFlags: 0

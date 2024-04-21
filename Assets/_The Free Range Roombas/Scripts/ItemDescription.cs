@@ -97,7 +97,12 @@ public class ItemDescription : MonoBehaviour
     {
 	    if(string.IsNullOrEmpty(itemId))
 	    {
-	    	itemId = gameObject.name;
+	    	if(descriptions.Length == 0)
+		    	Debug.Log(gameObject.name + " has no descriptions");
+	    	else if(descriptions[0].lines.Length == 0)
+		    	Debug.Log(gameObject.name + "'s first description has no lines");
+		    else
+	    	itemId = descriptions[0].lines[0].audioLine.name;
 	    }
     }
 
