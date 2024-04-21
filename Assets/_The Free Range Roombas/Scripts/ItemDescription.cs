@@ -45,7 +45,6 @@ using UnityEngine.UI;
 	public class Description
 	{
 		public Line[] lines;
-	
 		int nextLineNumber = 0;
 		
 		public void StartFromStart()
@@ -91,10 +90,15 @@ public class ItemDescription : MonoBehaviour
 	
 	public Description[] descriptions;
 	
+	public string itemId;
+	
     // Start is called before the first frame update
     void Start()
     {
-        
+	    if(string.IsNullOrEmpty(itemId))
+	    {
+	    	itemId = gameObject.name;
+	    }
     }
 
     // Update is called once per frame
@@ -103,10 +107,10 @@ public class ItemDescription : MonoBehaviour
         
     }
     
-	static int i = 0;
+	int i = 0;
 	public float Scan(Text textDisplay, AudioSource audioSource)
 	{
-		i++;
+		i = PropsScannedTracker.Instance.ScanProp(itemId);
 		
 		if(i > descriptions.Length -1)
 		 i = descriptions.Length -1;
