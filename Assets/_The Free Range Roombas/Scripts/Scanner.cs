@@ -28,7 +28,9 @@ public class Scanner : MonoBehaviour
 	public float scanReloadTime = 0f;
 	public Camera camera;
 	
+	public UnityEvent OnScanning, OnNotScanning;
 	public UnityEvent OnScan = new UnityEvent(), OnScanReadFinish = new UnityEvent();
+	public Image scanningAnimationImage;
 	
     // Start is called before the first frame update
     void Start()
@@ -50,10 +52,15 @@ public class Scanner : MonoBehaviour
 	void FixedUpdate()
 	{
 		
+		
 		if(readingScan)
 			return;
 		// Bit shift the index of the layer (8) to get a bit mask
 		//int layerMask = 1 << 8;
+		
+		if(scanningAnimationImage != null)
+			scanningAnimationImage.fillAmount = recognizing/recognizingLoadTime;
+		
 
 		// This would cast rays only against colliders in layer 8.
 		// But instead we want to collide against everything except layer 8. The ~ operator does this, it inverts a bitmask.
@@ -78,6 +85,7 @@ public class Scanner : MonoBehaviour
 						recognizing+= Time.deltaTime;
 						
 						//Debug.Log("is recognizing ");
+						OnScanning.Invoke();
 						
 						if(recognizing > recognizingLoadTime)
 						{
@@ -142,6 +150,7 @@ public class Scanner : MonoBehaviour
 		{
 			Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
 			//Debug.Log("Did not Hit");
+			OnNotScanning.Invoke();
 		}
 	}
 	
