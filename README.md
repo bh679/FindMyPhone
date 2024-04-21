@@ -17,7 +17,6 @@ https://findmyphone.brennanhatton.com/publisher-package
 [<img width="557" alt="Screenshot 2024-04-18 at 5 54 09 pm" src="https://github.com/bh679/FindMyPhone/assets/2542558/d3881cfc-2eb0-44c9-9db9-85966d20efcf">](https://www.youtube.com/watch?v=G9uVi2Y8z3M)
 
 
-
 ## Requirements
  - [Unity 2022.3.25f1](https://unity.com/releases/editor/qa/lts-releases)
  - [VRIF 2.0.12 (paid)](https://assetstore.unity.com/packages/templates/systems/vr-interaction-framework-161066)
