@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/BNG Framework/Scenes/XR Demo.unity
     guid: a1360534006d3f845bc79b46b93cfec5
   - enabled: 0
@@ -23,6 +23,21 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/BNG Framework/Scenes/Quest Demo.unity
     guid: eac0312c32df12949a47d07747a9d1cd
+  - enabled: 1
+    path: Assets/_The Free Range Roombas/0 House/House.unity
+    guid: a520696ebc393564bbdd36a361bc3117
+  - enabled: 1
+    path: Assets/_The Free Range Roombas/1 Bees/Bees.unity
+    guid: 87a68ce35125dde4d88e2cb9a188adbb
+  - enabled: 1
+    path: Assets/_The Free Range Roombas/2 Roomba/Roomba.unity
+    guid: 1c99c0198d41eff44a9b4de02c1d0fc6
+  - enabled: 1
+    path: Assets/_The Free Range Roombas/3 Radio/Radio.unity
+    guid: 25c2ab1786370174ca1bc7c3fb4a0087
+  - enabled: 1
+    path: Assets/_The Free Range Roombas/0 House/HouseEnd.unity
+    guid: b124bafd6305f624d9f80694ae81c0db
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 95738646979e66347937d1a88ead7f33,
       type: 2}
