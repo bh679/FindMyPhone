@@ -12,7 +12,7 @@ namespace BrennanHatton.PhotoPrinter
 		public RawImage image;
 		public Grabbable grabbable;
 		public Rigidbody rb;
-		float timeToDrop = 10f;
+		public float timeToDrop = 5f;
 		public bool grabbed = false;
 		
 		public void Print(float distance, float time)

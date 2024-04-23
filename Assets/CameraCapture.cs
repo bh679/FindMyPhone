@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿//originally from https://forum.unity.com/threads/how-to-save-manually-save-a-png-of-a-camera-view.506269/
+
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -49,6 +51,7 @@ namespace BrennanHatton.PhotoPrinter
 			Texture2D image = new Texture2D(Camera.targetTexture.width, Camera.targetTexture.height);
 			image.ReadPixels(new Rect(0, 0, Camera.targetTexture.width, Camera.targetTexture.height), 0, 0);
 			image.Apply();
+			onCapture.Invoke(image);
 			RenderTexture.active = activeRenderTexture;
 	 
 			byte[] bytes = image.EncodeToPNG();
@@ -57,7 +60,6 @@ namespace BrennanHatton.PhotoPrinter
 			File.WriteAllBytes(Application.dataPath + "/Snaps/" + fileCounter + ".png", bytes);
 			fileCounter++;
 			
-			onCapture.Invoke(image);
 			
 			StartCoroutine(prepare());
 		}

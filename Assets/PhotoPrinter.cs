@@ -11,6 +11,7 @@ namespace BrennanHatton.PhotoPrinter
 		public CameraCapture camera;
 		public PhotoPrint printPrefab;
 		public Transform spawnPoint;
+		public float delay = 1f;
 		public float printDistance = 0.5f, printTime = 2f;
 		
 		void Start()
@@ -20,9 +21,34 @@ namespace BrennanHatton.PhotoPrinter
 	    
 		public void Print(Texture2D image)
 		{
-			PhotoPrint print = Instantiate(printPrefab,spawnPoint.position,spawnPoint.rotation,spawnPoint);
-			print.image.texture = image;
-			print.Print(0.5f, printTime);
+			StartCoroutine(printAfterTime(image, delay));
 		}
+		
+		IEnumerator printAfterTime(Texture2D image, float time)
+		{
+			Debug.Log(image);
+			Texture2D texture = CopyTexture(image);
+			Debug.Log(texture);
+			yield return new WaitForSeconds(time);
+			
+			Debug.Log(texture);
+			
+			PhotoPrint print = Instantiate(printPrefab,spawnPoint.position,spawnPoint.rotation,spawnPoint);
+			print.image.texture = texture;
+			print.Print(printDistance, printTime);
+		}
+		
+		Texture2D CopyTexture(Texture2D source)
+		{
+			// Create a new empty texture with the same dimensions and format
+			Texture2D copy = new Texture2D(source.width, source.height, source.format, source.mipmapCount > 1);
+			// Copy the pixel data from the source texture to the new one
+			Graphics.CopyTexture(source, copy);
+			// Apply changes to the new texture
+			copy.Apply();
+
+			return copy;
+		}
+
 	}
 }
