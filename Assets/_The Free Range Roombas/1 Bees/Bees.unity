@@ -50646,7 +50646,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 179988, guid: 5e9f23a0d535d65438771a89191d0f83,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1580741945}
   m_SourcePrefab: {fileID: 100100000, guid: 5e9f23a0d535d65438771a89191d0f83, type: 3}
 --- !u!4 &1580741943 stripped
 Transform:
@@ -50654,6 +50658,33 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1580741942}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1580741944 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 179988, guid: 5e9f23a0d535d65438771a89191d0f83,
+    type: 3}
+  m_PrefabInstance: {fileID: 1580741942}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1580741945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580741944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc7aacbb56ce9d044a06a9ded544fa36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptions:
+  - lines:
+    - textLine: I wouldn't start checking the garbage bags.
+      audioLine: {fileID: 8300000, guid: f49f574edf14e334487c53e0e1360408, type: 3}
+      delayafter: 0
+    - textLine: I mean I can help you find your phone... but less so your dignity.
+      audioLine: {fileID: 8300000, guid: b1d55c25cf875994891895200e8027ea, type: 3}
+      delayafter: 0
+  itemId: 
 --- !u!1001 &1583252031
 PrefabInstance:
   m_ObjectHideFlags: 0

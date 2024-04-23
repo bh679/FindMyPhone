@@ -27,8 +27,9 @@ public class PropsScannedTracker : MonoBehaviour
 	{
 		if(!propsScanned.ContainsKey(id))
 			propsScanned.Add(id,0);
+		else
+			propsScanned[id]++;
 				
-		propsScanned[id]++;
 		return propsScanned[id];
 	}
 }
