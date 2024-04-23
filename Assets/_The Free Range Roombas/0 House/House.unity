@@ -5083,6 +5083,11 @@ PrefabInstance:
       propertyPath: descriptions.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7608276904535919577, guid: 1ea01ba025d49f0408d8517a7f1b493b,
+        type: 3}
+      propertyPath: DoorIsLocked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7616507341686003335, guid: 1ea01ba025d49f0408d8517a7f1b493b,
         type: 3}
       propertyPath: descriptions.Array.size
