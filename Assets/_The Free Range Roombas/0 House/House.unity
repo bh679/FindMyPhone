@@ -5083,6 +5083,16 @@ PrefabInstance:
       propertyPath: descriptions.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7228655150807595504, guid: 1ea01ba025d49f0408d8517a7f1b493b,
+        type: 3}
+      propertyPath: descriptions.Array.data[0].lines.Array.data[0].audioLine
+      value: 
+      objectReference: {fileID: 8300000, guid: dc127da256ca1c6499c400a7cd714c36, type: 3}
+    - target: {fileID: 7228655150807595504, guid: 1ea01ba025d49f0408d8517a7f1b493b,
+        type: 3}
+      propertyPath: descriptions.Array.data[0].lines.Array.data[1].audioLine
+      value: 
+      objectReference: {fileID: 8300000, guid: c3760c8176192844884d83b3a93a7839, type: 3}
     - target: {fileID: 7608276904535919577, guid: 1ea01ba025d49f0408d8517a7f1b493b,
         type: 3}
       propertyPath: DoorIsLocked
