@@ -4503,6 +4503,7 @@ MonoBehaviour:
   printPrefab: {fileID: 5904876365379504527, guid: ad4c06dcae12f43fe9cd124afedebb8c,
     type: 3}
   spawnPoint: {fileID: 1721678890}
+  delay: 1
   printDistance: 0.25
   printTime: 2
 --- !u!1 &1775226865 stripped

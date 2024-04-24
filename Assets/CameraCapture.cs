@@ -43,13 +43,19 @@ namespace BrennanHatton.PhotoPrinter
 			
 			source.PlayOneShot(snapClip);
 			
-			RenderTexture activeRenderTexture = RenderTexture.active;
+			RenderTexture activeRenderTexture = new RenderTexture(Camera.targetTexture.width, Camera.targetTexture.height, 24, RenderTextureFormat.R16)//ARGB32
+			{
+				antiAliasing = 4
+			};
+			
+			//RenderTexture activeRenderTexture = RenderTexture.active;
 			RenderTexture.active = Camera.targetTexture;
 	 
 			Camera.Render();
 	 
-			Texture2D image = new Texture2D(Camera.targetTexture.width, Camera.targetTexture.height);
+			Texture2D image = new Texture2D(Camera.targetTexture.width, Camera.targetTexture.height, TextureFormat.R16, false, true);
 			image.ReadPixels(new Rect(0, 0, Camera.targetTexture.width, Camera.targetTexture.height), 0, 0);
+			
 			image.Apply();
 			onCapture.Invoke(image);
 			RenderTexture.active = activeRenderTexture;
