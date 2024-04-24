@@ -41,9 +41,14 @@ namespace BrennanHatton.PhotoPrinter
 				
 			ready = false;
 			
+			StartCoroutine(_capture());
+		}
+		
+		IEnumerator _capture()
+		{
 			source.PlayOneShot(snapClip);
 			
-			RenderTexture activeRenderTexture = new RenderTexture(Camera.targetTexture.width, Camera.targetTexture.height, 24, RenderTextureFormat.R16)//ARGB32
+			RenderTexture activeRenderTexture = new RenderTexture(Camera.targetTexture.width, Camera.targetTexture.height, 24, RenderTextureFormat.RGB565)//ARGB32
 			{
 				antiAliasing = 4
 			};
@@ -53,7 +58,7 @@ namespace BrennanHatton.PhotoPrinter
 	 
 			Camera.Render();
 	 
-			Texture2D image = new Texture2D(Camera.targetTexture.width, Camera.targetTexture.height, TextureFormat.R16, false, true);
+			Texture2D image = new Texture2D(Camera.targetTexture.width, Camera.targetTexture.height, TextureFormat.RGB565, false, true);
 			image.ReadPixels(new Rect(0, 0, Camera.targetTexture.width, Camera.targetTexture.height), 0, 0);
 			
 			image.Apply();
@@ -66,12 +71,6 @@ namespace BrennanHatton.PhotoPrinter
 			File.WriteAllBytes(Application.dataPath + "/Snaps/" + fileCounter + ".png", bytes);
 			fileCounter++;
 			
-			
-			StartCoroutine(prepare());
-		}
-		
-		IEnumerator prepare()
-		{
 			yield return new WaitForSeconds(delay);
 			
 			ready = true;

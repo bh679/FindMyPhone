@@ -46,11 +46,21 @@ namespace BrennanHatton.PhotoPrinter
 					yield return null; 
 			}
 			
-			rb.isKinematic = false;
-			rb.useGravity = true;
+			Drop();
 			
 			yield return null; 
 		}
+		
+		public void Drop()
+		{
+			if(grabbed)
+				return;
+				
+			this.transform.SetParent(this.transform.root);
+			rb.isKinematic = false;
+			rb.useGravity = true;
+		}
+		
 		
 		
 	}

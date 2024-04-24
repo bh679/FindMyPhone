@@ -4506,6 +4506,7 @@ MonoBehaviour:
   delay: 1
   printDistance: 0.25
   printTime: 2
+  prints: []
 --- !u!1 &1775226865 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8474471853777230734, guid: 4b016a19a02354017983c476d64ec2fc,
@@ -4698,7 +4699,7 @@ MonoBehaviour:
   Camera: {fileID: 1981808579}
   snapClip: {fileID: 8300000, guid: e0fcadfedec8b48898544a2774eac6e5, type: 3}
   source: {fileID: 1288588116}
-  delay: 5
+  delay: 3
   onCapture:
     m_PersistentCalls:
       m_Calls: []
@@ -4826,6 +4827,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 984993583349032938, guid: 1ea01ba025d49f0408d8517a7f1b493b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 5.18507
+      objectReference: {fileID: 0}
+    - target: {fileID: 984993583349032938, guid: 1ea01ba025d49f0408d8517a7f1b493b,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -2.592535
+      objectReference: {fileID: 0}
     - target: {fileID: 984993583355350920, guid: 1ea01ba025d49f0408d8517a7f1b493b,
         type: 3}
       propertyPath: m_Layer
@@ -4936,6 +4947,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 984993583832251074, guid: 1ea01ba025d49f0408d8517a7f1b493b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.3439548
+      objectReference: {fileID: 0}
+    - target: {fileID: 984993583832251074, guid: 1ea01ba025d49f0408d8517a7f1b493b,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -1.6719774
       objectReference: {fileID: 0}
     - target: {fileID: 984993583851378740, guid: 1ea01ba025d49f0408d8517a7f1b493b,
         type: 3}
@@ -5401,6 +5422,16 @@ PrefabInstance:
       propertyPath: descriptions.Array.data[0].lines.Array.data[1].audioLine
       value: 
       objectReference: {fileID: 8300000, guid: 96f90242f5a2698499300092f080bff4, type: 3}
+    - target: {fileID: 984993585129618354, guid: 1ea01ba025d49f0408d8517a7f1b493b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 6.908365
+      objectReference: {fileID: 0}
+    - target: {fileID: 984993585129618354, guid: 1ea01ba025d49f0408d8517a7f1b493b,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -3.4541824
+      objectReference: {fileID: 0}
     - target: {fileID: 984993585234388907, guid: 1ea01ba025d49f0408d8517a7f1b493b,
         type: 3}
       propertyPath: m_Layer
@@ -5425,6 +5456,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 984993585426552422, guid: 1ea01ba025d49f0408d8517a7f1b493b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 6.224798
+      objectReference: {fileID: 0}
+    - target: {fileID: 984993585426552422, guid: 1ea01ba025d49f0408d8517a7f1b493b,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -3.112399
       objectReference: {fileID: 0}
     - target: {fileID: 984993585426689181, guid: 1ea01ba025d49f0408d8517a7f1b493b,
         type: 3}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3003476613751709467}
   - component: {fileID: 4544038027455313303}
   - component: {fileID: 5971752552514247254}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 7882528972453713921}
   - component: {fileID: 5204871749504960591}
   - component: {fileID: 6732004725129936157}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RawImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 4559772792543024355}
   - component: {fileID: 4383439039113532231}
   - component: {fileID: 8974829979692667578}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,8 @@ GameObject:
   - component: {fileID: 5904876365379504527}
   - component: {fileID: 5967183083120183544}
   - component: {fileID: 6290238085225160545}
-  m_Layer: 0
+  - component: {fileID: -1402300803446264851}
+  m_Layer: 10
   m_Name: Photo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,6 +333,7 @@ MonoBehaviour:
   image: {fileID: 6732004725129936157}
   grabbable: {fileID: 5967183083120183544}
   rb: {fileID: 6290238085225160545}
+  timeToDrop: 5
   grabbed: 0
 --- !u!114 &5967183083120183544
 MonoBehaviour:
@@ -429,3 +431,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &-1402300803446264851
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8338668350471989668}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.14986208, y: 0.20015702, z: 0.010861545}
+  m_Center: {x: -0.00040548295, y: 0.00014643869, z: -0.00023494149}

@@ -14,6 +14,8 @@ namespace BrennanHatton.PhotoPrinter
 		public float delay = 1f;
 		public float printDistance = 0.5f, printTime = 2f;
 		
+		public List<PhotoPrint> prints = new List<PhotoPrint>();
+		
 		void Start()
 		{
 			camera.onCapture.AddListener(Print);
@@ -26,6 +28,9 @@ namespace BrennanHatton.PhotoPrinter
 		
 		IEnumerator printAfterTime(Texture2D image, float time)
 		{
+			if(prints.Count > 0)
+			prints[prints.Count-1].Drop();
+			
 			Debug.Log(image);
 			Texture2D texture = CopyTexture(image);
 			Debug.Log(texture);
@@ -36,6 +41,8 @@ namespace BrennanHatton.PhotoPrinter
 			PhotoPrint print = Instantiate(printPrefab,spawnPoint.position,spawnPoint.rotation,spawnPoint);
 			print.image.texture = texture;
 			print.Print(printDistance, printTime);
+			
+			prints.Add(print);
 		}
 		
 		Texture2D CopyTexture(Texture2D source)
