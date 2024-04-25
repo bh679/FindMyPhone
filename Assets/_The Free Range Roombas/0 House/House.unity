@@ -1775,7 +1775,7 @@ MonoBehaviour:
           m_CallState: 2
   source: {fileID: 1288588116}
   TMPTextFeild: {fileID: 162453540}
-  PlayOnEnable: 1
+  PlayOnEnable: 0
 --- !u!1 &1207542634
 GameObject:
   m_ObjectHideFlags: 0
