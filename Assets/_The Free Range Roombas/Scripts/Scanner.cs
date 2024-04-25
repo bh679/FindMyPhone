@@ -94,12 +94,14 @@ public class Scanner : MonoBehaviour
 						// Check if the item has been recognized
 						if(recognizing > recognizingLoadTime)
 						{
+							// Trigger scan success event
+							OnScan.Invoke();
+							
 							// Play scanned sound
 							audioSource.PlayOneShot(scanedClip);
 							scanned = true;
 							readingScan = true;
-							// Trigger scan success event
-							OnScan.Invoke();
+							
 							// Temporarily disable the camera
 							camera.gameObject.SetActive(false);
 							

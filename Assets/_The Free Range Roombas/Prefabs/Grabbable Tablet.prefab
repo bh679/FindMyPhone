@@ -97,7 +97,7 @@ Transform:
   - {fileID: 7960614278530041123}
   - {fileID: 1743355328178279897}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &1467425961581434399
 MeshFilter:
@@ -1073,6 +1073,18 @@ MonoBehaviour:
   OnScan:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 5030675419186789995}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 7169576449877779919}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
