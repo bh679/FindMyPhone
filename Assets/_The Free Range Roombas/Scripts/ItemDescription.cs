@@ -115,18 +115,19 @@ public class ItemDescription : MonoBehaviour
     }
     
 	int i = 0;
-	public float Scan(Text textDisplay, AudioSource audioSource)
+	public float Scan()//Text textDisplay, AudioSource audioSource)
 	{
 		i = PropsScannedTracker.Instance.ScanProp(itemId);
 		
 		if(i > descriptions.Length -1)
 		 i = descriptions.Length -1;
 		
-		
 		if(descriptions.Length > 1)
-			StartCoroutine(PlayAllLines(textDisplay, audioSource, i));
+			//StartCoroutine(PlayAllLines(textDisplay, audioSource, i));
+			VoiceManager.Instance.PlayWhenReady(descriptions[i]);
 		else
-			StartCoroutine(PlayAllLines(textDisplay, audioSource, 0));
+			VoiceManager.Instance.PlayWhenReady(descriptions[0]);
+			//StartCoroutine(PlayAllLines(textDisplay, audioSource, 0));
 		
 		return descriptions[i].TotalLength();
 		

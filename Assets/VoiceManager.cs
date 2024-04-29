@@ -14,12 +14,36 @@ namespace BrennanHatton.Scanning
 		
 		public UnityEvent onPlay, onFinishPlay;
 		
+		public static VoiceManager Instance { get; private set; }
+
+		private void Awake() 
+		{ 
+			// If there is an instance, and it's not me, delete myself.
+    
+			if (Instance != null && Instance != this) 
+			{ 
+				Destroy(this); 
+			} 
+			else 
+			{ 
+				Instance = this; 
+			} 
+		}
+		
 		void Reset()
 		{
 			source = this.GetComponent<AudioSource>();
 		}
 		
-		public void AddToVoices(Line clip)
+		public void PlayWhenReady(Description description)
+		{
+			for(int i= 0; i < description.lines.Length; i++)
+				toPlay.Add(description.lines[i]);
+			
+			PlayNext();
+		}
+		
+		public void PlayWhenReady(Line clip)
 		{
 			toPlay.Add(clip);
 			
@@ -42,7 +66,7 @@ namespace BrennanHatton.Scanning
 			PlayNext();
 		}
 		
-		public void PlayNext()
+		void PlayNext()
 		{
 			if(toPlay.Count == 0)
 			{
@@ -70,7 +94,7 @@ namespace BrennanHatton.Scanning
 			PlayNext();
 		}
 		
-		public void ClearList()
+		void ClearList()
 		{
 			toPlay = new List<Line>();
 		}
