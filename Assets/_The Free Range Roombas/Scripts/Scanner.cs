@@ -133,7 +133,7 @@ namespace BrennanHatton.Scanning
 									storySkipId++;
 									
 									// Start reading the scanned item
-									readtime = itemToScan.Scan();//textDisplay, audioSource);
+									readtime = itemToScan.Scan(textDisplay, audioSource);
 									
 								}
 								

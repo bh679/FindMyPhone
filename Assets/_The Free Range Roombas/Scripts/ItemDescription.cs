@@ -86,67 +86,65 @@ namespace BrennanHatton.Scanning
 		
 	}
 
-public class ItemDescription : MonoBehaviour
-{
-	
-	
-	public Description[] descriptions;
-	
-	public string itemId;
-	
-    // Start is called before the first frame update
-    void Start()
-    {
-	    if(string.IsNullOrEmpty(itemId))
+	public class ItemDescription : MonoBehaviour
+	{
+		
+		
+		public Description[] descriptions;
+		
+		public string itemId;
+		
+	    // Start is called before the first frame update
+	    void Start()
 	    {
-	    	if(descriptions.Length == 0)
-		    	Debug.Log(gameObject.name + " has no descriptions");
-	    	else if(descriptions[0].lines.Length == 0)
-		    	Debug.Log(gameObject.name + "'s first description has no lines");
-		    else
-	    	itemId = descriptions[0].lines[0].audioLine.name;
+		    if(string.IsNullOrEmpty(itemId))
+		    {
+		    	if(descriptions.Length == 0)
+			    	Debug.Log(gameObject.name + " has no descriptions");
+		    	else if(descriptions[0].lines.Length == 0)
+			    	Debug.Log(gameObject.name + "'s first description has no lines");
+			    else
+		    	itemId = descriptions[0].lines[0].audioLine.name;
+		    }
 	    }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
-	int i = 0;
-	public float Scan()//Text textDisplay, AudioSource audioSource)
-	{
-		i = PropsScannedTracker.Instance.ScanProp(itemId);
-		
-		if(i > descriptions.Length -1)
-		 i = descriptions.Length -1;
-		
-		if(descriptions.Length > 1)
-			//StartCoroutine(PlayAllLines(textDisplay, audioSource, i));
-			VoiceManager.Instance.PlayWhenReady(descriptions[i]);
-		else
-			VoiceManager.Instance.PlayWhenReady(descriptions[0]);
-			//StartCoroutine(PlayAllLines(textDisplay, audioSource, 0));
-		
-		return descriptions[i].TotalLength();
-		
-	}
 	
-	IEnumerator PlayAllLines(Text textDisplay, AudioSource audioSource, int _i)
-	{
-		descriptions[_i].StartFromStart();
-		float delay;
-		
-		do
+	    // Update is called once per frame
+	    void Update()
+	    {
+	        
+	    }
+	    
+		int i = 0;
+		public float Scan(Text textDisplay, AudioSource audioSource)
 		{
-			delay = descriptions[_i].PlayNextLine(textDisplay, audioSource);
+			i = PropsScannedTracker.Instance.ScanProp(itemId);
 			
-			yield return new WaitForSeconds(delay);
+			if(i > descriptions.Length -1)
+			 i = descriptions.Length -1;
 			
-		}while(!descriptions[_i].NoMoreLines());
+			if(descriptions.Length > 1)
+				StartCoroutine(PlayAllLines(textDisplay, audioSource, i));
+			else
+				StartCoroutine(PlayAllLines(textDisplay, audioSource, 0));
+			
+			return descriptions[i].TotalLength();
+			
+		}
 		
-		yield return null;
+		IEnumerator PlayAllLines(Text textDisplay, AudioSource audioSource, int _i)
+		{
+			descriptions[_i].StartFromStart();
+			float delay;
+			
+			do
+			{
+				delay = descriptions[_i].PlayNextLine(textDisplay, audioSource);
+				
+				yield return new WaitForSeconds(delay);
+				
+			}while(!descriptions[_i].NoMoreLines());
+			
+			yield return null;
+		}
 	}
-}
 }
