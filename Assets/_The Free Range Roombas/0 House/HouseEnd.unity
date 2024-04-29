@@ -8374,6 +8374,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1555691147}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   onTriggerStayEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -9175,6 +9187,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Tablet
       objectReference: {fileID: 0}
+    - target: {fileID: 1190840846726107339, guid: 5fe3e235304eb40af9794d3adc4c71b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2955037212676857328, guid: 5fe3e235304eb40af9794d3adc4c71b7,
         type: 3}
       propertyPath: m_RootOrder
@@ -9233,7 +9250,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5188337979395492756, guid: 5fe3e235304eb40af9794d3adc4c71b7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1555691149}
   m_SourcePrefab: {fileID: 100100000, guid: 5fe3e235304eb40af9794d3adc4c71b7, type: 3}
 --- !u!114 &879516853 stripped
 MonoBehaviour:
@@ -11122,6 +11143,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1067734592}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1099400117 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5188337979395492756, guid: 5fe3e235304eb40af9794d3adc4c71b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 879516852}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1106269273
 GameObject:
   m_ObjectHideFlags: 0
@@ -12072,6 +12099,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1555691147}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -15136,6 +15175,29 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 879516852}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1555691149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099400117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f771b5bfa6346f7ba3f3f04848718c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 0}
+  textAsset: {fileID: 0}
+  toPlay: []
+  onPlay:
+    m_PersistentCalls:
+      m_Calls: []
+    m_CallsDirty: 1
+  onFinishPlay:
+    m_PersistentCalls:
+      m_Calls: []
+    m_CallsDirty: 1
 --- !u!1001 &1557036235
 PrefabInstance:
   m_ObjectHideFlags: 0
