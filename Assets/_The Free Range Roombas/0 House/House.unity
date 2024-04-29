@@ -1445,7 +1445,7 @@ RectTransform:
   m_LocalRotation: {x: -0.00000005960463, y: 0.0000000023267963, z: -0.0000000023267963,
     w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.000020503998}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 731160686}
@@ -1469,14 +1469,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3254902}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.078431375}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 0
@@ -3872,12 +3872,17 @@ PrefabInstance:
     - target: {fileID: 5958328995181935928, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
       propertyPath: OnScan.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5958328995181935928, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
       propertyPath: OnScan.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5958328995181935928, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      propertyPath: OnScan.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5958328995181935928, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
@@ -3891,13 +3896,28 @@ PrefabInstance:
       objectReference: {fileID: 1288588116}
     - target: {fileID: 5958328995181935928, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
+      propertyPath: OnScan.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1000474686}
+    - target: {fileID: 5958328995181935928, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
       propertyPath: OnScan.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5958328995181935928, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      propertyPath: OnScan.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5958328995181935928, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
       propertyPath: OnScan.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5958328995181935928, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      propertyPath: OnScan.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: set_fillAmount
       objectReference: {fileID: 0}
     - target: {fileID: 5958328995181935928, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
@@ -3926,6 +3946,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5958328995181935928, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
+      propertyPath: OnScan.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.UI.Image, UnityEngine.UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5958328995181935928, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
       propertyPath: OnStartOfLastStoryClip.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 348906473}
@@ -3942,6 +3967,11 @@ PrefabInstance:
     - target: {fileID: 5958328995181935928, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
       propertyPath: OnScan.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5958328995181935928, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      propertyPath: OnScan.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5958328995181935928, guid: 4b016a19a02354017983c476d64ec2fc,

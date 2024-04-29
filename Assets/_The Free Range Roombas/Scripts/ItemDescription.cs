@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+namespace BrennanHatton.Scanning
+{
 
 	[System.Serializable]
 	public class Line
@@ -145,4 +147,5 @@ public class ItemDescription : MonoBehaviour
 		
 		yield return null;
 	}
+}
 }
