@@ -173,6 +173,14 @@ namespace BrennanHatton.Scanning
 		{
 			scanReloadTime = newTime;
 		}
+		
+		public void ResetStory(AudioClip[] newStory, int frequency, UnityEvent onFinish)
+		{
+			storyId = 0;
+			storyClips = newStory;
+			storyClipFrequency = frequency;
+			OnStartOfLastStoryClip = onFinish;
+		}
 	}
 
 }
