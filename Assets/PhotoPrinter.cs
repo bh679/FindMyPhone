@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace BrennanHatton.PhotoPrinter
 {
+	
 	 
 	public class PhotoPrinter : MonoBehaviour
 	{
@@ -29,14 +30,14 @@ namespace BrennanHatton.PhotoPrinter
 		IEnumerator printAfterTime(Texture2D image, float time)
 		{
 			if(prints.Count > 0)
-			prints[prints.Count-1].Drop();
+				prints[prints.Count-1].Drop();
 			
-			Debug.Log(image);
+			//Debug.Log(image);
 			Texture2D texture = CopyTexture(image);
-			Debug.Log(texture);
+			//Debug.Log(texture);
 			yield return new WaitForSeconds(time);
 			
-			Debug.Log(texture);
+			//Debug.Log(texture);
 			
 			PhotoPrint print = Instantiate(printPrefab,spawnPoint.position,spawnPoint.rotation,spawnPoint);
 			print.image.texture = texture;

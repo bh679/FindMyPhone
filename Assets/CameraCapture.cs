@@ -8,6 +8,8 @@ using UnityEngine.Events;
 
 namespace BrennanHatton.PhotoPrinter
 {
+	
+	
 	/// <summary>
 	/// A UnityEvent with a Grabber as the parameter
 	/// </summary>

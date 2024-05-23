@@ -124,6 +124,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &126721071 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5552023869599591928, guid: 4b016a19a02354017983c476d64ec2fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1712704543}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &162453540 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2765038279768868085, guid: 4b016a19a02354017983c476d64ec2fc,
@@ -4761,6 +4773,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1981808578}
+    - targetCorrespondingSourceObject: {fileID: 7519075413900406709, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1981808581}
   m_SourcePrefab: {fileID: 100100000, guid: 4b016a19a02354017983c476d64ec2fc, type: 3}
 --- !u!1 &1721678889
 GameObject:
@@ -5054,6 +5070,29 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1712704543}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1981808581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981808575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d41bc787de97947fd8e2cf0b7db0d267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1288588116}
+  textFeild: {fileID: 126721071}
+  storyClips:
+  - textLine: test
+    audioLine: {fileID: 8300000, guid: b9d4866c593ed4ef0aa85bc052ccd26b, type: 3}
+    delayafter: 0
+  storyClipFrequency: 0
+  OnStartOfLastStoryClip:
+    m_PersistentCalls:
+      m_Calls: []
+  onlyWhenSilent: 0
 --- !u!1 &2032207989
 GameObject:
   m_ObjectHideFlags: 0
