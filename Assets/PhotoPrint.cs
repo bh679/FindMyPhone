@@ -20,6 +20,11 @@ namespace BrennanHatton.PhotoPrinter
 			StartCoroutine(printing(distance, time));
 		}
 		
+		public void SetGrab(bool isTrue)
+		{
+			grabbed = isTrue;
+		}
+		
 		IEnumerator printing(float distance, float time)
 		{
 			float distanceLeft = distance;
