@@ -4078,6 +4078,30 @@ MonoBehaviour:
   repeats: 0
   onEnable: 1
   repeatOnEnable: 0
+--- !u!1 &1444329751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5759378995243567147, guid: 4b016a19a02354017983c476d64ec2fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1712704543}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1444329752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444329751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b39b1f2b4994a12b685ab74f8ec306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sources:
+  - {fileID: 1288588116}
+  - {fileID: 1332296592}
+  - {fileID: 1153228913}
+  - {fileID: 621547878}
+  - {fileID: 1158009264}
 --- !u!1 &1467640744
 GameObject:
   m_ObjectHideFlags: 0
@@ -4186,10 +4210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1153228913}
-  checkSources:
-  - {fileID: 1288588116}
-  - {fileID: 1332296592}
-  - {fileID: 1158009264}
+  voiceSources: {fileID: 1444329752}
   textFeild: {fileID: 126721071}
   initalDelay: 25
   storyClips:
@@ -5033,6 +5054,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1981808581}
+    - targetCorrespondingSourceObject: {fileID: 5759378995243567147, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1444329752}
   m_SourcePrefab: {fileID: 100100000, guid: 4b016a19a02354017983c476d64ec2fc, type: 3}
 --- !u!1 &1721678889
 GameObject:
@@ -5227,9 +5252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1332296592}
-  checkSources:
-  - {fileID: 1288588116}
-  - {fileID: 1158009264}
+  voiceSources: {fileID: 1444329752}
   textFeild: {fileID: 126721071}
   initalDelay: 100
   storyClips:
@@ -5712,11 +5735,7 @@ MonoBehaviour:
       m_Calls: []
   onlyWhenSilent: 1
   startOnFirst: 1
-  checkSources:
-  - {fileID: 1288588116}
-  - {fileID: 1332296592}
-  - {fileID: 1153228913}
-  - {fileID: 621547878}
+  voiceSources: {fileID: 1444329752}
 --- !u!1 &2032207989
 GameObject:
   m_ObjectHideFlags: 0

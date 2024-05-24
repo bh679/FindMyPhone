@@ -22,7 +22,7 @@ public class StorySystem: MonoBehaviour
 	public bool onlyWhenSilent = false;
 	public bool startOnFirst = true;
 	
-	public AudioSource[] checkSources;
+	public AudioSourceList voiceSources;
 	
 	
 		
@@ -37,22 +37,12 @@ public class StorySystem: MonoBehaviour
 			storySkipId = storyClipFrequency;
 	}
 	
-	bool SourceIsPlaying()
-	{
-		for(int i = 0; i < checkSources.Length; i++)
-		{
-			if(checkSources[i].isPlaying)
-				return true;
-		}
-		
-		return false;
-	}
 	
 	
 	// Update is called once per frame
 	void Update()
 	{
-		if(onlyWhenSilent && SourceIsPlaying())
+		if(onlyWhenSilent && voiceSources.IsPlaying(audioSource))
 			audioSource.Stop();
 	}
 		
@@ -116,7 +106,7 @@ public class StorySystem: MonoBehaviour
 			
 		do
 		{
-			if(onlyWhenSilent && SourceIsPlaying())
+			if(onlyWhenSilent && voiceSources.IsPlaying(audioSource))
 			{
 				isPlaying = false;
 				yield return null;

@@ -8,7 +8,7 @@ public class StoryCommentsTimed : MonoBehaviour
 {
 	
 	public AudioSource audioSource;
-	public AudioSource[] checkSources;
+	public AudioSourceList voiceSources;
 	public Text textFeild;
 	
 	public float initalDelay = 0;
@@ -42,22 +42,12 @@ public class StoryCommentsTimed : MonoBehaviour
 		StartCoroutine(runAudioList());
 	}
 	
-	bool SourceIsPlaying()
-	{
-		for(int i = 0; i < checkSources.Length; i++)
-		{
-			if(checkSources[i].isPlaying)
-				return true;
-		}
-		
-		return false;
-	}
 	
 	
 	// Update is called once per frame
 	void Update()
 	{
-		if(onlyWhenSilent && SourceIsPlaying())
+		if(onlyWhenSilent && voiceSources.IsPlaying(audioSource))
 			audioSource.Stop();
 	}
 	
@@ -74,7 +64,7 @@ public class StoryCommentsTimed : MonoBehaviour
 			
 			do
 			{
-				while(onlyWhenSilent && SourceIsPlaying())
+				while(onlyWhenSilent && voiceSources.IsPlaying(audioSource))
 				{
 					yield return new WaitForSeconds(1);
 				}

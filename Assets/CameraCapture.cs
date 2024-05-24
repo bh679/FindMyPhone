@@ -38,6 +38,9 @@ namespace BrennanHatton.PhotoPrinter
 	 
 		public void Capture()
 		{
+			if(!this.enabled)
+				return;
+			
 			if(!ready)
 				return;
 				
