@@ -19,6 +19,7 @@ namespace BrennanHatton.Scanning
 		public Text textDisplay;
 		// Source for playing audio clips
 		public AudioSource audioSource;
+		public AudioSource FXaudioSource;
 		// Audio clips for scanning and scanned sounds
 		public AudioClip scanningClip, scanedClip;
 		// Event triggered at the start of the last story clip
@@ -101,7 +102,7 @@ namespace BrennanHatton.Scanning
 								OnScan.Invoke();
 								
 								// Play scanned sound
-								audioSource.PlayOneShot(scanedClip);
+								FXaudioSource.PlayOneShot(scanedClip);
 								scanned = true;
 								readingScan = true;
 								
@@ -147,7 +148,7 @@ namespace BrennanHatton.Scanning
 						recognizing = 0;
 						itemScanning = itemToScan;
 						scanned = false;
-						audioSource.PlayOneShot(scanningClip);
+						FXaudioSource.PlayOneShot(scanningClip);
 					}
 				}
 				//found a new object

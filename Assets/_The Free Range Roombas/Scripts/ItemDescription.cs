@@ -64,6 +64,7 @@ namespace BrennanHatton.Scanning
 		{
 			float delay = lines[nextLineNumber].delayafter + lines[nextLineNumber].Length();
 			
+			//Debug.Log("lines[nextLineNumber].Play(textDisplay, audioSource);");
 			lines[nextLineNumber].Play(textDisplay, audioSource); // right now it only plays one line
 			nextLineNumber++;
 			

@@ -12,7 +12,7 @@ public class StorySystem: MonoBehaviour
 	public Text textFeild;
 		
 	// Array of story audio clips
-	public Line[] storyClips;
+	public Description[] storyClips;
 		
 	// Frequency of skipping story clips
 	public int storyClipFrequency = 0;
@@ -20,29 +20,37 @@ public class StorySystem: MonoBehaviour
 	public UnityEvent OnStartOfLastStoryClip;
 		
 	public bool onlyWhenSilent = false;
+	public bool startOnFirst = true;
 		
 	int storyId = 0;
 	int storySkipId = 0;
 	float readtime;
-		
-	public void Next(){
-		NextBool();
+	bool isPlaying = false;
+	
+	void Start()
+	{
+		if(startOnFirst)
+			storySkipId = storyClipFrequency;
 	}
 		
-	public bool NextBool()
+	public void PlayNextStory_Editor(){
+		PlayNextStory();
+	}
+		
+	public bool PlayNextStory()
 	{
 		Debug.Log("Next - Determine if a story clip should be played");
 		// Determine if a story clip should be played
-		if(storyId < storyClips.Length && storySkipId >= storyClipFrequency)
+		if(storyId < storyClips.Length && storySkipId >= storyClipFrequency && !isPlaying)
 		{
 			Debug.Log("Next - if (onlyWhenSilent && audioSource.isPlaying)");
 			if (onlyWhenSilent && audioSource.isPlaying)
+			{
+				storySkipId++;
 				return false;
+			}
 					
-			Debug.Log("Next - Play the current story clip");
-			// Play the current story clip
-			storyClips[storyId].Play(textFeild, audioSource);
-									
+			
 			Debug.Log("Next - If it is the last story clip, trigger the corresponding event");
 			// If it is the last story clip, trigger the corresponding event
 			if(storyId == storyClips.Length - 1)
@@ -56,12 +64,18 @@ public class StorySystem: MonoBehaviour
 			storySkipId = 0;
 			storyId++;
 				
+				
+			Debug.Log("Next - Play the current story clip");
+			// Play the current story clip
+			//storyClips[storyId].Play(textFeild, audioSource);
+			StartCoroutine(PlayAllLines());
+			
 			return true;
 		}
 		else
 		{
 				
-			Debug.Log("Next - Increment skip counter and scan the item");
+			Debug.Log("Next - Increment skip counter and scan the item " + storySkipId);
 				
 			// Increment skip counter and scan the item
 			storySkipId++;
@@ -69,5 +83,25 @@ public class StorySystem: MonoBehaviour
 			return false;
 		}
 				
+	}
+		
+	IEnumerator PlayAllLines()
+	{
+		isPlaying = true;
+		storyClips[storyId-1].StartFromStart();
+		float delay;
+			
+		do
+		{
+			Debug.Log("delay = storyClips[storyId].PlayNextLine(textFeild, audioSource);");
+			delay = storyClips[storyId-1].PlayNextLine(textFeild, audioSource);
+				
+			yield return new WaitForSeconds(delay);
+				
+		}while(!storyClips[storyId-1].NoMoreLines());
+		Debug.Log("while(!storyClips[storyId].NoMoreLines()); - ended");
+			
+		isPlaying = false;
+		yield return null;
 	}
 }

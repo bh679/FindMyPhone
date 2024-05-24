@@ -2582,6 +2582,12 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 1712704543}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1288588117 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8020401003654603604, guid: 4b016a19a02354017983c476d64ec2fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1712704543}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1305842064 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 922994261680376064, guid: 4b016a19a02354017983c476d64ec2fc,
@@ -4308,7 +4314,7 @@ PrefabInstance:
     - target: {fileID: 1464738183155121735, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
       propertyPath: onTriggerDown.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1464738183155121735, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
@@ -4324,7 +4330,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onTriggerDown.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1288588116}
+      objectReference: {fileID: 1981808581}
     - target: {fileID: 1464738183155121735, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
       propertyPath: onTriggerDown.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -4343,7 +4349,7 @@ PrefabInstance:
     - target: {fileID: 1464738183155121735, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
       propertyPath: onTriggerDown.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayOneShot
+      value: PlayNextStory_Editor
       objectReference: {fileID: 0}
     - target: {fileID: 1464738183155121735, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
@@ -4363,13 +4369,13 @@ PrefabInstance:
     - target: {fileID: 1464738183155121735, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
       propertyPath: onTriggerDown.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.AudioSource, UnityEngine
+      value: StorySystem, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1464738183155121735, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
       propertyPath: onTriggerDown.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 8300000, guid: e0fcadfedec8b48898544a2774eac6e5, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1464738183155121735, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
       propertyPath: onGrab.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -4388,7 +4394,7 @@ PrefabInstance:
     - target: {fileID: 1464738183155121735, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
       propertyPath: onTriggerDown.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.AudioClip, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3876576396901771159, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
@@ -4490,6 +4496,16 @@ PrefabInstance:
       propertyPath: TimedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5759378995243567147, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      propertyPath: m_Name
+      value: Voice Audio Source
+      objectReference: {fileID: 0}
+    - target: {fileID: 5958328995181935928, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      propertyPath: FXaudioSource
+      value: 
+      objectReference: {fileID: 1848892988}
     - target: {fileID: 5958328995181935928, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
       propertyPath: scanningAnimationImage
@@ -4764,6 +4780,10 @@ PrefabInstance:
         type: 3}
       insertIndex: 0
       addedObject: {fileID: 731160686}
+    - targetCorrespondingSourceObject: {fileID: 8020401003654603604, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1848892989}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 922994261680376064, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
@@ -4956,6 +4976,134 @@ Transform:
   m_Father: {fileID: 1669573943}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1848892987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1848892989}
+  - component: {fileID: 1848892988}
+  m_Layer: 0
+  m_Name: FX Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1848892988
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848892987}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.68
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1848892989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848892987}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1288588117}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1868187989 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 427768, guid: bf0e56a097b1e8e41819c3d039977632,
@@ -5052,11 +5200,23 @@ MonoBehaviour:
   screenshotKey: 0
   Camera: {fileID: 1981808579}
   snapClip: {fileID: 8300000, guid: e0fcadfedec8b48898544a2774eac6e5, type: 3}
-  source: {fileID: 1288588116}
+  source: {fileID: 1848892988}
   delay: 3
   onCapture:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1981808581}
+        m_TargetAssemblyTypeName: StorySystem, Assembly-CSharp
+        m_MethodName: PlayNextStory_Editor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   ready: 1
 --- !u!20 &1981808579 stripped
 Camera:
@@ -5085,14 +5245,28 @@ MonoBehaviour:
   audioSource: {fileID: 1288588116}
   textFeild: {fileID: 126721071}
   storyClips:
-  - textLine: test
-    audioLine: {fileID: 8300000, guid: b9d4866c593ed4ef0aa85bc052ccd26b, type: 3}
-    delayafter: 0
-  storyClipFrequency: 0
+  - lines:
+    - textLine: Oh, my photo feature. Perfect!
+      audioLine: {fileID: 8300000, guid: b9d4866c593ed4ef0aa85bc052ccd26b, type: 3}
+      delayafter: 0
+    - textLine: Hey now we can save these memroies forever.
+      audioLine: {fileID: 8300000, guid: ced4fe631ca8a42828ab004959ee9aaa, type: 3}
+      delayafter: 0
+  - lines:
+    - textLine: Beautiful, another perfect shot
+      audioLine: {fileID: 8300000, guid: 613e76a4f1e534cd48e0f1e25a5d7e8d, type: 3}
+      delayafter: 0
+    - textLine: and dont worry.. with my extreme lean resource manager
+      audioLine: {fileID: 8300000, guid: 50e26865416464e6fbe210443a92ccfd, type: 3}
+      delayafter: 0
+    - textLine: we are not going to be running out of photos or film anytime soon
+      audioLine: {fileID: 8300000, guid: 238f247b54b634b08816e07b61cd5a3c, type: 3}
+      delayafter: 0
+  storyClipFrequency: 2
   OnStartOfLastStoryClip:
     m_PersistentCalls:
       m_Calls: []
-  onlyWhenSilent: 0
+  onlyWhenSilent: 1
 --- !u!1 &2032207989
 GameObject:
   m_ObjectHideFlags: 0
