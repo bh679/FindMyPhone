@@ -2003,6 +2003,134 @@ Transform:
   m_Father: {fileID: 1467640746}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1158009261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1158009262}
+  - component: {fileID: 1158009264}
+  m_Layer: 0
+  m_Name: Camera Voice AudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1158009262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158009261}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1981808580}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1158009264
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158009261}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.68
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1205633121
 GameObject:
   m_ObjectHideFlags: 0
@@ -3871,6 +3999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1427252985}
   - component: {fileID: 1427252986}
+  - component: {fileID: 1427252987}
   m_Layer: 0
   m_Name: Go Outside Help
   m_TagString: Untagged
@@ -3918,6 +4047,37 @@ MonoBehaviour:
   OnStartOfLastStoryClip:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1427252987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427252984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66563b6a4e0c2b74b90057612789d8a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0
+  TimedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1427252986}
+        m_TargetAssemblyTypeName: BrennanHatton.Scanning.StoryClipReset, Assembly-CSharp
+        m_MethodName: Set
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  repeats: 0
+  onEnable: 1
+  repeatOnEnable: 0
 --- !u!1 &1467640744
 GameObject:
   m_ObjectHideFlags: 0
@@ -3928,6 +4088,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1467640746}
   - component: {fileID: 1467640745}
+  - component: {fileID: 1467640748}
+  - component: {fileID: 1467640747}
   m_Layer: 0
   m_Name: How to Scan
   m_TagString: Untagged
@@ -3942,7 +4104,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467640744}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cebb7b23140b3844bb46679c9a79352, type: 3}
   m_Name: 
@@ -4011,6 +4173,76 @@ Transform:
   m_Father: {fileID: 1669573943}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1467640747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467640744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52cf9901fe694c2ab03b669eb2e3618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1153228913}
+  checkSources:
+  - {fileID: 1288588116}
+  - {fileID: 1332296592}
+  - {fileID: 1158009264}
+  textFeild: {fileID: 126721071}
+  initalDelay: 25
+  storyClips:
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: 4e42f91249a7849519e8afd0d7e7ddfa, type: 3}
+      delayafter: 20
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: abf4f2ee2a3bf4e9fb02604e97778749, type: 3}
+      delayafter: 20
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: d6810c23509fe4823809fe0d56036a63, type: 3}
+      delayafter: 15
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: 6faaf6119311542febe4d2dc19e41a52, type: 3}
+      delayafter: 15
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: 9c71f541a027549a4aeed4fc68e96657, type: 3}
+      delayafter: 15
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: 9dcc0d029dda84b9e9b1f8b854f56a41, type: 3}
+      delayafter: 10
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: 6035b8470f2e94cb18f164d997f7d8e7, type: 3}
+      delayafter: 10
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: 7ce1e1ec1ff8042f0bd81c3157b2fdb1, type: 3}
+      delayafter: 10
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: b47f9e02f3b39485b84c402793627ee4, type: 3}
+      delayafter: 0.5
+  onlyWhenSilent: 0
+  PlayOnEnable: 1
+--- !u!114 &1467640748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467640744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a44b75eab3dc418e85cdd7a19c60dbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1485081023
 GameObject:
   m_ObjectHideFlags: 0
@@ -4249,7 +4481,7 @@ PrefabInstance:
     - target: {fileID: 1464738183155121735, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
       propertyPath: onGrab.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1464738183155121735, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
@@ -4768,6 +5000,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1721678890}
+    - targetCorrespondingSourceObject: {fileID: 8719413185195996450, guid: 4b016a19a02354017983c476d64ec2fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1158009262}
     - targetCorrespondingSourceObject: {fileID: 6371450052106250172, guid: 4b016a19a02354017983c476d64ec2fc,
         type: 3}
       insertIndex: 2
@@ -4878,6 +5114,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1801256240}
   - component: {fileID: 1801256239}
+  - component: {fileID: 1801256241}
+  - component: {fileID: 1801256242}
   m_Layer: 0
   m_Name: Pick Me Up Help
   m_TagString: Untagged
@@ -4892,7 +5130,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801256238}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cebb7b23140b3844bb46679c9a79352, type: 3}
   m_Name: 
@@ -4976,6 +5214,87 @@ Transform:
   m_Father: {fileID: 1669573943}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1801256241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801256238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52cf9901fe694c2ab03b669eb2e3618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1332296592}
+  checkSources:
+  - {fileID: 1288588116}
+  - {fileID: 1158009264}
+  textFeild: {fileID: 126721071}
+  initalDelay: 100
+  storyClips:
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: a5801c19b0079403ea8f37c4b59a5f35, type: 3}
+      delayafter: 45
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: cac2c216b93e243a088fff73f2221d81, type: 3}
+      delayafter: 30
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: c256dfd1d44ee48c281b9e7011e62ec9, type: 3}
+      delayafter: 30
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: 0f0c27b63394049938ab6ff797575228, type: 3}
+      delayafter: 30
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: dff17cb1f33cf4a48801c7589d3d978e, type: 3}
+      delayafter: 30
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: 30f5aed0ba4374277badfb320b54986d, type: 3}
+      delayafter: 30
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: f44d396826ecd4ac0aeae94af6afecb5, type: 3}
+      delayafter: 30
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: 5c7d9159bf3ea484c93ce79dcb44da5a, type: 3}
+      delayafter: 30
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: 00970bee0f4c04e5ba4ab8b0278b2fa7, type: 3}
+      delayafter: 30
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: 2c5a9ebfcda7144c2b3e90f86ca21799, type: 3}
+      delayafter: 30
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: 2042b9f7c8ac445088197d2afee79274, type: 3}
+      delayafter: 30
+  - lines:
+    - textLine: 
+      audioLine: {fileID: 8300000, guid: 5804554ac79e54885b72d3f0849de1cc, type: 3}
+      delayafter: 0.5
+  onlyWhenSilent: 1
+  PlayOnEnable: 1
+--- !u!114 &1801256242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801256238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a44b75eab3dc418e85cdd7a19c60dbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1848892987
 GameObject:
   m_ObjectHideFlags: 0
@@ -5253,8 +5572,8 @@ MonoBehaviour:
       audioLine: {fileID: 8300000, guid: ced4fe631ca8a42828ab004959ee9aaa, type: 3}
       delayafter: 0
   - lines:
-    - textLine: Beautiful, another perfect shot
-      audioLine: {fileID: 8300000, guid: 613e76a4f1e534cd48e0f1e25a5d7e8d, type: 3}
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 26a137ab459b7433a9dc65b9e6590314, type: 3}
       delayafter: 0
     - textLine: and dont worry.. with my extreme lean resource manager
       audioLine: {fileID: 8300000, guid: 50e26865416464e6fbe210443a92ccfd, type: 3}
@@ -5262,11 +5581,142 @@ MonoBehaviour:
     - textLine: we are not going to be running out of photos or film anytime soon
       audioLine: {fileID: 8300000, guid: 238f247b54b634b08816e07b61cd5a3c, type: 3}
       delayafter: 0
-  storyClipFrequency: 2
+  - lines:
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 3e8a7bc652a514d5b94310f0d4a7472c, type: 3}
+      delayafter: 0
+  - lines:
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: e335983fdf38046f2a41de493e787d1c, type: 3}
+      delayafter: 0
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 2a47a43a42ac14164aedaf8bcb5346e5, type: 3}
+      delayafter: 0
+  - lines:
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 230151b0bdb744145b112f83d892a005, type: 3}
+      delayafter: 0
+  - lines:
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: b36d70fe337f6466a9203c2d99f4c238, type: 3}
+      delayafter: 0
+  - lines:
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 456191290ce274372add34f5754c95bb, type: 3}
+      delayafter: 0
+  - lines:
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 3ff8be5f16e6543dc8621d5131433238, type: 3}
+      delayafter: 0
+  - lines:
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 5f2a6c3708a954d93bb6fda369b61ea0, type: 3}
+      delayafter: 0
+  - lines:
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 9f2dd98595fa6492db7482f26f858b7a, type: 3}
+      delayafter: 0
+  - lines:
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: f7912906d3777491aa60e9eb575aaeae, type: 3}
+      delayafter: 0
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: dd89d6ea9de49421598836d924100556, type: 3}
+      delayafter: 0
+  - lines:
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: aa92d3f3a0e4042eba2717fb96548d30, type: 3}
+      delayafter: 0
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: ad619d582e95a4f5abdc83f4e408832f, type: 3}
+      delayafter: 0
+  - lines:
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 3249591537c964f058ef11badd56196f, type: 3}
+      delayafter: 0
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: ea9403a82c1744188a023261e7440cf0, type: 3}
+      delayafter: 0
+  - lines:
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: e9bb5262afa054371808032331e2c3da, type: 3}
+      delayafter: 0
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 2566efaf3f5c74b0aa8af864a2ad840e, type: 3}
+      delayafter: 0
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 7d24a44e4eb24467788a0138140202d3, type: 3}
+      delayafter: 0
+  - lines:
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: d50e72ff511a545d0bc8f961bae5a526, type: 3}
+      delayafter: 0
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 0fb40879805f94acba142859b27176d7, type: 3}
+      delayafter: 0
+  - lines:
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 18ca5bb6613534f5e9a250760c67f4dc, type: 3}
+      delayafter: 0
+  - lines:
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 68a983584f81a4a81945345b29663049, type: 3}
+      delayafter: 0
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: b08d5f82a93204ab1b4f88c8911b9197, type: 3}
+      delayafter: 0
+  - lines:
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 7f00b1b482c8f46b397dea48b38deaf0, type: 3}
+      delayafter: 0
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: c8debfc8b208343d3b7824013cf8378d, type: 3}
+      delayafter: 0
+  - lines:
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 9eeb05111128b4b42a6f6f93c32a971f, type: 3}
+      delayafter: 0
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 56694a1ee95c5462baa4770292703a6e, type: 3}
+      delayafter: 0
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 03157f48b8fbe4f43bcb589febb016c1, type: 3}
+      delayafter: 0
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 9f8c6620aeccd49ae9c8ed55cc2e4f70, type: 3}
+      delayafter: 0
+  - lines:
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 1efa90004e88241cfb033632e93a91ed, type: 3}
+      delayafter: 0
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 1cae2497ee5d54aba970b3331b4523bf, type: 3}
+      delayafter: 0
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 0216932bff3da4bc9b0a17c1992be6a2, type: 3}
+      delayafter: 0
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: c6679e4f4d5b34b99b854bd8004d09c7, type: 3}
+      delayafter: 0
+  - lines:
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: ba52dc4cbbb484cd6a1c503d8fa3582f, type: 3}
+      delayafter: -0.04
+  - lines:
+    - textLine: Beautiful, another phenomenal shot
+      audioLine: {fileID: 8300000, guid: 541624275c5a3423db03a523579f4d33, type: 3}
+      delayafter: -0.04
+  storyClipFrequency: 1
   OnStartOfLastStoryClip:
     m_PersistentCalls:
       m_Calls: []
   onlyWhenSilent: 1
+  startOnFirst: 1
+  checkSources:
+  - {fileID: 1288588116}
+  - {fileID: 1332296592}
+  - {fileID: 1153228913}
+  - {fileID: 621547878}
 --- !u!1 &2032207989
 GameObject:
   m_ObjectHideFlags: 0
