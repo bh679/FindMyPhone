@@ -26,7 +26,7 @@ namespace BrennanHatton.Scanning
 		public UnityEvent OnStartOfLastStoryClip;
 		
 		// Array of story audio clips
-		public AudioClip[] storyClips;
+		public AudioClip[] storyClips, overscannedSkips;
 		// Frequency of skipping story clips
 		public int storyClipFrequency = 0;
 		// Current story clip index

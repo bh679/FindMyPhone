@@ -17,4 +17,12 @@ public class AudioSourceList : MonoBehaviour
 		
 		return false;
 	}
+	
+	public void StopAll()
+	{
+		for(int i = 0; i < sources.Length; i++)
+		{
+			sources[i].Stop();
+		}
+	}
 }
